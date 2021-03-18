@@ -9,7 +9,6 @@ const socket = new WebSocket(
 const AGGREGATE_INDEX = "5";
 
 socket.addEventListener("message", e => {
-  console.log(e);
   const { TYPE: type, FROMSYMBOL: currency, PRICE: newPrice } = JSON.parse(
     e.data
   );
